@@ -305,14 +305,14 @@ def format_response(response):
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)  # Enable CORS for cross-origin requests
-app.secret_key = os.environ.get("FLASK_SECRET_KEY", "AIzaSyAR9OBJ4INLy2HpXQ_kGawvV68P7-nHXTY")
+app.secret_key = os.environ.get("FLASK_SECRET_KEY", "default-fallback-key")
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # Limit uploads to 16MB
 
 # Dictionary to store chat instances by session ID
 chat_instances = {}
 
 # Set your API key
-API_KEY = os.environ.get("GOOGLE_API_KEY", "AIzaSyAR9OBJ4INLy2HpXQ_kGawvV68P7-nHXTY")
+API_KEY = os.environ.get("GOOGLE_API_KEY", "default-api-key")
 
 @app.route('/api/chat', methods=['POST'])
 def chat():
