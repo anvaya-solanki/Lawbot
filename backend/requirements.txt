@@ -1,0 +1,12 @@
+requests
+beautifulsoup4
+undetected-chromedriver
+selenium
+flask
+flask-cors
+PyPDF2
+python-docx
+pytesseract
+pillow
+pandas
+pymongo
